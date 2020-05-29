@@ -20,18 +20,18 @@ class ViewController: UIViewController {
 
     func getLocalInfo() {
 
-        print(Locale.preferredLanguages)
+        print("Locale.preferredLanguages: \(Locale.preferredLanguages)")
 
         let loc = Locale.current
-        print(loc)
-        print(loc.identifier)
-        print(loc.languageCode)
-        print(loc.regionCode)
-        print(loc.calendar)
-        print(loc.decimalSeparator)
-        print(loc.currencyCode)
-        print(loc.currencySymbol)
-        print(loc.usesMetricSystem)
+        print("Locale.current: \(loc)")
+        print("Locale.identifier: \(loc.identifier)")
+        print("Locale.languageCode: \(String(describing: loc.languageCode))")
+        print("Locale.regionCode: \(String(describing: loc.regionCode))")
+        print("Locale.calendar: \(loc.calendar)")
+        print("Locale.decimalSeparator: \(String(describing: loc.decimalSeparator))")
+        print("Locale.currencyCode: \(String(describing: loc.currencyCode))")
+        print("Locale.currencySymbol: \(String(describing: loc.currencySymbol))")
+        print("Locale.usesMetricSystem: \(loc.usesMetricSystem)")
 
     }
     
@@ -42,13 +42,13 @@ class ViewController: UIViewController {
             //the width and height represent the amount.
         let pointsWidth = screen.bounds.size.width
         let pointsHeight = screen.bounds.size.height
-        print("bounds: Width: \(pointsWidth) x Height: \(pointsHeight) = \(pointsWidth * pointsHeight) points")
+        print("UIScreen.bounds: Width: \(pointsWidth) x Height: \(pointsHeight) = \(pointsWidth * pointsHeight) points")
         
             //nativeBounds represents pixels
             //the width and height represent the amount.
         let pixelsWidth = screen.nativeBounds.size.width
         let pixelsHeight = screen.nativeBounds.size.height
-        print("nativBounds: Width: \(pixelsWidth) x Height: \(pixelsHeight) = \(pixelsWidth * pixelsHeight) pixels")
+        print("UIScreen.nativBounds: Width: \(pixelsWidth) x Height: \(pixelsHeight) = \(pixelsWidth * pixelsHeight) pixels")
 
             //scale is the difference between point and pixel.
         print("Scale: \(screen.scale)")
